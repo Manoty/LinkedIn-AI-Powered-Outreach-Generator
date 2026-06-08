@@ -37,6 +37,11 @@ def generate_outreach(linkedin_text: str, your_profile: str, goal: str, tone: st
         "stream": False,
         "options": {
         "temperature": 0.7,
+        "top_p": 0.92,
+        "repeat_penalty": 1.15,
+        "num_predict": 1024,    
+        "num_ctx": 4096, 
+        
         }
     }
     

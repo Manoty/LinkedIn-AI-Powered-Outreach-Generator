@@ -137,5 +137,30 @@
         "By working together, we aim to deliver perfection in every aspect"
       ]
     }
+  },
+  {
+    "id": 7,
+    "timestamp": "2026-06-08T11:53:50.452525",
+    "request": {
+      "goal": "job",
+      "tone": "founder",
+      "target_signals": {
+        "probable_name": "Sarah Chen",
+        "probable_role_line": "- Scaled engineering team from 8 \u2192 34 in 18 months",
+        "probable_company": "Luminary AI\nSan Francisco Bay Area",
+        "profile_word_count": 164
+      },
+      "your_profile_snippet": "I'm a backend engineer with 4 years of experience building high-throughput distributed systems in Py"
+    },
+    "response": {
+      "subject": "Unlocking Real-Time Object Detection at Scale",
+      "email": "I'm reaching out as a seasoned backend engineer with expertise in high-throughput distributed systems and real-time infrastructure.",
+      "linkedin_message": "Hi Sarah, I came across Luminary AI's work on real-time inference and saw the challenges they face with low-latency object detection. I'd love to explore potential opportunities for a senior engineering role at your company.",
+      "key_insights": [
+        "Scaling engineering teams from small to large in 18 months",
+        "Architected real-time inference pipeline handling over 2M+ requests/day",
+        "Introduced SLO framework that reduced P99 latency by 40%"
+      ]
+    }
   }
 ]
