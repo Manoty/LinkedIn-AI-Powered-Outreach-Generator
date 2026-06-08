@@ -36,6 +36,10 @@ def generate_outreach(linkedin_text: str, your_profile: str, goal: str, tone: st
         "prompt": filled_prompt,
         "stream": False,
     }
+    
+    print("OLLAMA_BASE_URL =", OLLAMA_BASE_URL)
+    print("OLLAMA_MODEL =", OLLAMA_MODEL)
+    print("FULL URL =", f"{OLLAMA_BASE_URL}/api/generate")
 
     try:
         response = requests.post(
@@ -43,6 +47,8 @@ def generate_outreach(linkedin_text: str, your_profile: str, goal: str, tone: st
             json=payload,
             timeout=120,
         )
+        print("STATUS:", response.status_code)
+        print("BODY:", response.text)
         response.raise_for_status()
         raw = response.json().get("response", "")
     except requests.exceptions.ConnectionError:

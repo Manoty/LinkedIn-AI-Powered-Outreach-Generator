@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "timestamp": "2026-06-08T11:27:45.151233",
+    "request": {
+      "goal": "job",
+      "tone": "professional",
+      "target_signals": {
+        "probable_name": "Juliet Muitha",
+        "probable_role_line": "Founder@ TheeCozyNest Interiors Kenya                Interior Design Studio",
+        "probable_company": "Goodnotes",
+        "profile_word_count": 275
+      },
+      "your_profile_snippet": "Kevin Manoti\nSoftware Engineer  | Analytics Engineer  | Building clean, fast analytics for startups "
+    },
+    "response": {
+      "subject": "Accelerating Growth with Clean Analytics",
+      "email": "Kevin Manoti | Software Engineer & Analytics Expert",
+      "linkedin_message": "Hi Juliet, I came across your profile and was impressed by your interior design studio's success. I'd love to explore how my analytics expertise can help you turn scattered data into actionable insights.",
+      "key_insights": [
+        "Companies like yours often struggle with data quality and reliability. My approach focuses on clean data modeling and clear definitions to drive business decisions."
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "timestamp": "2026-06-08T11:29:42.149306",
+    "request": {
+      "goal": "job",
+      "tone": "professional",
+      "target_signals": {
+        "probable_name": "Evance Achonjo",
+        "probable_role_line": "Founder Ravi Homes Kenya",
+        "probable_company": "Kenyatta University\n\nEvance started at Kenyatta University before you started\n\nMessage\nGet introduced to Evance\n\nAsk your mutual connections to help you start a conversation",
+        "profile_word_count": 114
+      },
+      "your_profile_snippet": "Kevin Manoti\nSoftware Engineer  | Analytics Engineer  | Building clean, fast analytics for startups "
+    },
+    "response": {
+      "subject": "Unlocking Data-Driven Growth for Ravi Homes Kenya",
+      "email": "kevin.manoti@softwareengineer.co.ke",
+      "linkedin_message": "Hi Evance, I came across your profile while researching talented founders in Nairobi. As a seasoned analytics engineer, I believe my skills can help you turn scattered data into actionable insights. Let's discuss how I can support your team.",
+      "key_insights": [
+        "Data accuracy is key for informed decision-making",
+        "Understand user behavior through clear metrics",
+        "Clean data modeling is essential for reliable insights"
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "timestamp": "2026-06-08T11:41:59.166176",
+    "request": {
+      "goal": "job",
+      "tone": "professional",
+      "target_signals": {
+        "probable_name": "CodeTerriers",
+        "profile_word_count": 102
+      },
+      "your_profile_snippet": "Kevin Manoti\nSoftware Engineer  | Analytics Engineer  | Building clean, fast analytics for startups "
+    },
+    "response": {
+      "subject": "Unlocking Clear Insights from Your Data",
+      "email": "A concise cold email...",
+      "linkedin_message": "As someone who helps founders turn scattered data into clear insights, I'd love to explore how CodeTerriers can benefit from my analytics expertise.",
+      "key_insights": [
+        "Insight 1: Focus on Key Metrics for Growth",
+        "Insight 2: Integrate DuckDB for Efficient Data Analysis",
+        "Insight 3: Collaborate with Early-Stage Teams"
+      ]
+    }
+  }
+]

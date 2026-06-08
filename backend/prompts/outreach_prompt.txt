@@ -34,16 +34,16 @@ INSTRUCTIONS:
 
 3. Generate the following — return ONLY valid JSON, no extra text, no markdown fences:
 
-{
+{{
   "subject": "A sharp, specific subject line under 10 words. No generic phrases.",
-  "email": "A concise cold email (max 150 words). Must: mention something specific from their profile, clearly state what value the sender brings, avoid 'I hope this finds you well' or any filler, end with one clear low-friction CTA. Sound confident, not desperate.",
-  "linkedin_message": "A shorter version (max 60 words) optimized for LinkedIn DM. Punchy, direct, human.",
+  "email": "A concise cold email...",
+  "linkedin_message": "A shorter version...",
   "key_insights": [
-    "Insight 1 about the target person or company",
-    "Insight 2 about where sender can add value",
-    "Insight 3 about why this outreach is relevant now"
+    "Insight 1",
+    "Insight 2",
+    "Insight 3"
   ]
-}
+}}
 
 TONE GUIDE:
 - professional: polished, clear, respectful

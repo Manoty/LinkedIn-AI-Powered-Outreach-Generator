@@ -1,122 +1,142 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { useState } from "react";
+import axios from "axios";
+import InputPanel from "../components/InputPanel";
+import OutputPanel from "../components/OutputPanel";
+import HistoryPanel from "../components/HistoryPanel";
 
-function App() {
-  const [count, setCount] = useState(0)
+const API = "http://localhost:8000";
+
+const DEFAULT_FORM = {
+  linkedin_text: "",
+  your_profile: "",
+  goal: "job",
+  tone: "professional",
+};
+
+export default function App() {
+  const [form, setForm] = useState(DEFAULT_FORM);
+  const [result, setResult] = useState(null);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (key, value) => {
+    setForm((prev) => ({ ...prev, [key]: value }));
+  };
+
+  const handleSubmit = async () => {
+    setError(null);
+    setResult(null);
+    setLoading(true);
+    try {
+      const res = await axios.post(`${API}/generate-outreach`, form);
+      setResult(res.data);
+    } catch (err) {
+      const msg =
+        err.response?.data?.detail ||
+        err.message ||
+        "Something went wrong. Is the backend running?";
+      setError(msg);
+    }
+    setLoading(false);
+  };
 
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+      <style>{`
+        @keyframes spin {
+          to { transform: rotate(360deg); }
+        }
+      `}</style>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+      <div style={styles.root}>
+        {/* Top bar */}
+        <div style={styles.topbar}>
+          <div style={styles.topbarLeft}>
+            <span style={styles.topbarLogo}>⚡</span>
+            <span style={styles.topbarName}>LinkedIn Outreach AI</span>
+            <span style={styles.topbarBadge}>LOCAL</span>
+          </div>
+          <HistoryPanel onRestore={(r) => { setResult(r); setError(null); }} />
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+        {/* Main layout */}
+        <div style={styles.layout}>
+          <div style={styles.leftPanel}>
+            <InputPanel
+              form={form}
+              onChange={handleChange}
+              onSubmit={handleSubmit}
+              loading={loading}
+            />
+          </div>
+          <div style={styles.divider} />
+          <div style={styles.rightPanel}>
+            <OutputPanel result={result} error={error} />
+          </div>
+        </div>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+const styles = {
+  root: {
+    minHeight: "100vh",
+    display: "flex",
+    flexDirection: "column",
+    background: "#0f1117",
+  },
+  topbar: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: "12px 28px",
+    borderBottom: "1px solid #1e2235",
+    background: "#13161f",
+    position: "sticky",
+    top: 0,
+    zIndex: 50,
+  },
+  topbarLeft: { display: "flex", alignItems: "center", gap: "10px" },
+  topbarLogo: { fontSize: "20px" },
+  topbarName: { fontWeight: 700, fontSize: "15px", color: "#c7cef7" },
+  topbarBadge: {
+    fontSize: "10px",
+    fontWeight: 700,
+    letterSpacing: "0.1em",
+    padding: "2px 8px",
+    background: "rgba(52,211,153,0.12)",
+    color: "#34d399",
+    border: "1px solid rgba(52,211,153,0.25)",
+    borderRadius: "99px",
+  },
+  layout: {
+    display: "flex",
+    flex: 1,
+    gap: "0",
+    padding: "28px",
+    maxWidth: "1400px",
+    width: "100%",
+    margin: "0 auto",
+    alignSelf: "stretch",
+  },
+  leftPanel: {
+    flex: "0 0 420px",
+    minWidth: "320px",
+    maxHeight: "calc(100vh - 80px)",
+    overflowY: "auto",
+    paddingRight: "8px",
+  },
+  divider: {
+    width: "1px",
+    background: "#1e2235",
+    margin: "0 28px",
+    flexShrink: 0,
+  },
+  rightPanel: {
+    flex: 1,
+    maxHeight: "calc(100vh - 80px)",
+    overflowY: "auto",
+    paddingLeft: "8px",
+  },
+};
