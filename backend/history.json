@@ -162,5 +162,30 @@
         "Introduced SLO framework that reduced P99 latency by 40%"
       ]
     }
+  },
+  {
+    "id": 8,
+    "timestamp": "2026-06-08T12:19:25.176707",
+    "request": {
+      "goal": "job",
+      "tone": "professional",
+      "target_signals": {
+        "probable_name": "Sarah Chen",
+        "probable_role_line": "- Scaled engineering team from 8 \u2192 34 in 18 months",
+        "probable_company": "Luminary AI\nSan Francisco Bay Area",
+        "profile_word_count": 164
+      },
+      "your_profile_snippet": "I'm a backend engineer with 4 years of experience building high-throughput distributed systems in Py"
+    },
+    "response": {
+      "subject": "Your real-time object detection expertise matters at Luminary AI",
+      "email": "I've built a distributed system that processes 5M+ events/day and reduced API latency by 35% through async architecture refactoring. I'm looking for a senior engineering role where infrastructure and ML systems intersect.",
+      "linkedin_message": "As the Head of Engineering at Luminary AI, you're building real-time object detection infrastructure to scale fast \u2014 I've built similar distributed systems with Python that handled 2M+ requests/day in 18 months.",
+      "key_insights": [
+        "{team_size} engineer grew from 8 to 34",
+        "{latency_reduction: '40%' in SLO framework}",
+        "{request_volumes: '2M+' daily}"
+      ]
+    }
   }
 ]
