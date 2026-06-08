@@ -35,6 +35,9 @@ def generate_outreach(linkedin_text: str, your_profile: str, goal: str, tone: st
         "model": OLLAMA_MODEL,
         "prompt": filled_prompt,
         "stream": False,
+        "options": {
+        "temperature": 0.7,
+        }
     }
     
     print("OLLAMA_BASE_URL =", OLLAMA_BASE_URL)

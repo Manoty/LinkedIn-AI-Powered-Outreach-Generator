@@ -69,5 +69,73 @@
         "Insight 3: Collaborate with Early-Stage Teams"
       ]
     }
+  },
+  {
+    "id": 4,
+    "timestamp": "2026-06-08T11:44:16.066144",
+    "request": {
+      "goal": "job",
+      "tone": "professional",
+      "target_signals": {
+        "probable_name": "CodeTerriers",
+        "profile_word_count": 102
+      },
+      "your_profile_snippet": "Kevin Manoti\nSoftware Engineer  | \n\nNairobi, Nairobi County, Kenya\n\n\u00b7\n\nContact info\n\n\nSafaricom PLC\n"
+    },
+    "response": {
+      "subject": "Unlocking Data-Driven Growth for [Company Name]",
+      "email": "A concise cold email that highlights value",
+      "linkedin_message": "As a seasoned analytics engineer, I help founders and teams turn scattered data into clear insights they can use to drive business decisions.",
+      "key_insights": [
+        "Data modeling should be straightforward and easy to understand.",
+        "Clear definitions are key when working with complex datasets.",
+        "Fast analytics is essential for making timely business decisions."
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "timestamp": "2026-06-08T11:45:16.918741",
+    "request": {
+      "goal": "job",
+      "tone": "professional",
+      "target_signals": {
+        "probable_name": "CodeTerriers",
+        "profile_word_count": 102
+      },
+      "your_profile_snippet": "Kevin Manoti\nSoftware Engineer  | \n\nNairobi, Nairobi County, Kenya\n\n\u00b7\n\nContact info\n\n\nSafaricom PLC\n"
+    },
+    "response": {
+      "subject": "Unlocking Efficiency in IT Services and Consulting",
+      "email": "A tailored approach to your IT needs with CodeTerriers",
+      "linkedin_message": "Hi Imthadh Ahamed, I came across your profile and was impressed by the expertise of your team. We're looking for a reliable and innovative CRM and testing services partner to help our clients.",
+      "key_insights": [
+        "Our trusted team guarantees reliability and maintenance of the solution",
+        "We deliver for perfection: time, quality, cost, complexity"
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "timestamp": "2026-06-08T11:46:58.378701",
+    "request": {
+      "goal": "job",
+      "tone": "professional",
+      "target_signals": {
+        "probable_name": "CodeTerriers",
+        "profile_word_count": 102
+      },
+      "your_profile_snippet": "Kevin Manoti\nSoftware Engineer  | \n\nNairobi, Nairobi County, Kenya\n\n\u00b7\n\nContact info\n\n\nSafaricom PLC\n"
+    },
+    "response": {
+      "subject": "Unlocking Value in CRM and Testing Services",
+      "email": "I came across your profile on LinkedIn and was impressed by your experience in IT services and consulting. I'd love to explore potential opportunities for collaboration.",
+      "linkedin_message": "Hi Imthadh, hope you're doing well. I've been following your page and noticed your expertise in IT services. I'm reaching out because we operate in the CRM and testing space, particularly with Salesforce and Dynamics. Would love to discuss how our teams can complement each other.",
+      "key_insights": [
+        "We value long-term relationships and a deep understanding of client needs",
+        "Our team guarantees reliability and maintenance for optimal results",
+        "By working together, we aim to deliver perfection in every aspect"
+      ]
+    }
   }
 ]
